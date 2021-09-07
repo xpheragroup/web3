@@ -74,19 +74,3 @@ class AccountChartTemplate(models.Model):
                             account.group_id = group
 
         return res
-
-class Partner(models.Model):
-    _inherit = "res.partner"
-
-    municipio = fields.Many2one('res.municipio')
-
-class Partner(models.Model):
-    _description = "Municipio"
-    _name = "res.municipio"
-
-    name = fields.Char('Nombre')
-    code = fields.Integer('Código')
-
-    _sql_constraints = [
-        ('name_uniq', 'unique (code, name)', 'El nombre o código de municipio ya existe!')
-    ]
