@@ -11,7 +11,7 @@
         </field>
     </record>
 
-    <!--<record model="ir.ui.view" id="res_partner_requisition_inherit">
+    <record model="ir.ui.view" id="res_partner_requisition_inherit">
         <field name="name">res.partner.municipio</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
@@ -20,6 +20,6 @@
                 <field name="municipio"/>
             </xpath>
         </field>
-    </record>-->
+    </record>
 
 </odoo> 

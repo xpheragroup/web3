@@ -18,7 +18,7 @@ class Partner(models.Model):
 class Partner(models.Model):
     _inherit = 'res.partner'
 
-    #municipio = fields.Many2one('res.municipio')
+    municipio = fields.Many2one('res.municipio')
     
 class AccountChartTemplate(models.Model):
     _inherit = 'account.chart.template'
