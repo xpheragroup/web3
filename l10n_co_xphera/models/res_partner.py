@@ -19,7 +19,26 @@ class Partner(models.Model):
     _inherit = 'res.partner'
 
     municipio = fields.Many2one('res.municipio')
-    
+    DV = fields.Integer('DV', compute='_compute_DV', help='Dígito de verificación.')
+
+    @api.onchange('vat')
+    def _compute_DV(self):
+        self.DV = 0
+        '''if int(self.vat[len(self.vat)-1:]):
+            self.DV = int(self.vat[len(self.vat)-1:])
+        else:
+            self.DV = 0
+        if self.vat:
+            if self.vat.isdigit() and len(self.vat)<16:
+            vpri = [0,3,7,13,17,19,23,29,37,41,43,47,53,59,67,71]
+            x = 0
+            y = 0
+            for i in range(0,len(self.vat)):
+                y = int(self.vat[i])
+                x = x + (y * vpri[len(self.vat)-i])
+                y = x % 11
+            dv = 11 - y if y > 1 else y'''
+            
 class AccountChartTemplate(models.Model):
     _inherit = 'account.chart.template'
 
