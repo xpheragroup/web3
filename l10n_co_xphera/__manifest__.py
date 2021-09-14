@@ -4,7 +4,7 @@
     'version': '0.9',
     'category': 'Localization',
     'description': 'Preconfiguración Contabilidad (Xphera)',
-    'author': 'Xphera.co',
+    'author': 'Xphera Group S.A.S.',
     'website': 'http://xphera.co',
     'depends': [
         'base',
